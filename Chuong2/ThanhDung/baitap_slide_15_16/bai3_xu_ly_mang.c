@@ -300,7 +300,7 @@ int main() {
 	printf("Nhap so luong phan tu cho mang:");
 	scanf("%d",&size);
 	
-	int arr[size]; // khai bao mang voi kich thuoc nguoi dung nhap
+	int arr[size]; 
 	
 	
 	 while (1) {
