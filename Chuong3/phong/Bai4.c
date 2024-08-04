@@ -1,47 +1,32 @@
 #include <stdio.h>
-#include <string.h>
+#include <ctype.h>  // Thư viện cho hàm tolower() và toupper()
+#include <string.h> // Thư viện cho hàm strlen()
 
-// Hàm cắt chuỗi họ tên thành chuỗi họ lót và chuỗi tên
-void splitFullName(const char *fullName, char *lastName, char *firstName) {
-    // Tìm vị trí của khoảng trắng cuối cùng
-    char *lastSpace = strrchr(fullName, ' ');
+void capitalizeWords(char *str) {
+    int length = strlen(str);
+    int isNewWord = 1;  // Đánh dấu xem có phải là từ mới hay không
 
-    if (lastSpace != NULL) {
-        // Tạo chuỗi họ lót
-        size_t lastNameLength = lastSpace - fullName;
-        strncpy(lastName, fullName, lastNameLength);
-        lastName[lastNameLength] = '\0';
-
-        // Tạo chuỗi tên
-        strcpy(firstName, lastSpace + 1);
-    } else {
-        // Nếu không có khoảng trắng, toàn bộ chuỗi là tên
-        strcpy(firstName, fullName);
-        lastName[0] = '\0'; // Họ lót là rỗng
+    for (int i = 0; i < length; i++) {
+        if (isspace(str[i])) {  // Nếu là khoảng trắng
+            isNewWord = 1;      // Đánh dấu từ mới sẽ bắt đầu sau khoảng trắng
+        } else {
+            if (isNewWord) {
+                str[i] = toupper(str[i]);  // Đổi ký tự đầu tiên thành chữ in hoa
+                isNewWord = 0;             // Reset cờ từ mới
+            } else {
+                str[i] = tolower(str[i]);  // Đổi các ký tự còn lại thành chữ thường
+            }
+        }
     }
 }
 
 int main() {
-    char fullName[100];
-    char lastName[100];
-    char firstName[50];
+    char str[] = "hOa hOng, nHo Nhat la Ngay duoc ben em.";
+    printf("Chuoi ban dau: %s\n", str);
+    
+    capitalizeWords(str);
 
-    // Nhập chuỗi họ tên từ người dùng
-    printf("Nhap vao ho ten: ");
-    fgets(fullName, sizeof(fullName), stdin);
-
-    // Xóa ký tự xuống dòng (nếu có) ở cuối chuỗi do fgets thêm vào
-    size_t len = strlen(fullName);
-    if (len > 0 && fullName[len - 1] == '\n') {
-        fullName[len - 1] = '\0';
-    }
-
-    // Cắt chuỗi họ tên thành chuỗi họ lót và chuỗi tên
-    splitFullName(fullName, lastName, firstName);
-
-    // In kết quả
-    printf("Chuoi ho lot: '%s'\n", lastName);
-    printf("Chuoi ten: '%s'\n", firstName);
+    printf("Chuoi sau khi doi: %s\n", str);
 
     return 0;
 }
