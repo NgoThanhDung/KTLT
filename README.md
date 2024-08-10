@@ -22,7 +22,7 @@
 1. Tải và cài đặt [Dev C++](https://sourceforge.net/projects/orwelldevcpp/).
 2. Clone repository này về máy của bạn:
     ```bash
-    git clone https://github.com/username/projectname.git
+    git clone https://github.com/NgoThanhDung/KTLT.git
     ```
 3. Mở Dev C++, chọn **File > Open Project or File...** để mở file `.dev` hoặc file `.c` trong thư mục **/KTLT**.
 4. Nhấn `F11` để biên dịch và chạy chương trình.
