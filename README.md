@@ -1,6 +1,6 @@
 # C Programming Exercises
-##Nhóm: **DP**
-##Thành viên: 
+## Nhóm: DP
+## Thành viên: 
    - Ngô Thanh Dũng, MSSV: 2001160202.
    - Phong, MSSV:
 ## Giới thiệu
