@@ -138,10 +138,10 @@ void timGiaTriXuatHienNhieuNhat(int **maTran, int soDong, int soCot) {
     int maxValue = 0;
     
     // Gia tri toi da co the la so phan tu cua ma tran
-    int *demGiaTri = (int *)malloc(1000 * sizeof(int));  // Gia su cac gia tri <= 1000
+    int *demGiaTri = (int *)malloc(10 * sizeof(int));  // Gia su cac gia tri <= 1000
     
     // Khoi tao dem gia tri
-    for (i = 0; i < 1000; ++i) {
+    for (i = 0; i < 10; ++i) {
         demGiaTri[i] = 0;
     }
     
@@ -149,7 +149,7 @@ void timGiaTriXuatHienNhieuNhat(int **maTran, int soDong, int soCot) {
     for (i = 0; i < soDong; ++i) {
         for (j = 0; j < soCot; ++j) {
             int giaTri = maTran[i][j];
-            if (giaTri >= 0 && giaTri < 1000) {  // Gioi han gia tri
+            if (giaTri >= 0 && giaTri < 10) {  // Gioi han gia tri
                 demGiaTri[giaTri]++;
                 if (demGiaTri[giaTri] > maxCount) {
                     maxCount = demGiaTri[giaTri];

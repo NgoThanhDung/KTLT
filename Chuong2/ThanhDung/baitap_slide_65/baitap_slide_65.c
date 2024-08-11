@@ -62,7 +62,7 @@ void tichPhanSo(int tuSo1, int mauSo1, int tuSo2, int mauSo2, int *tuSoTich, int
 }
 
 void thuongPhanSo(int tuSo1, int mauSo1, int tuSo2, int mauSo2, int *tuSoThuong, int *mauSoThuong) {
-	tuSoThuong = tuSo1 * mauSo2;
+	*tuSoThuong = tuSo1 * mauSo2;
 	*mauSoThuong = mauSo1 * tuSo2;
 	toiGianPhanSo(tuSoThuong, mauSoThuong);
 }
@@ -71,42 +71,58 @@ void xuatSoThapPhan(int tuso, int mauso) {
     printf("So thap phan ban nhap la: %d/%d\n", tuso,mauso);
 }
 
-int main(){
+int main() {
+    int tuSo1, mauSo1, tuSo2, mauSo2;
+    int tuSoTong, mauSoTong;
+    int tuSoHieu, mauSoHieu;
+    int tuSoTich, mauSoTich;
+    int tuSoThuong, mauSoThuong;
+    int choice;
 
-//	int tuso = nhapTuSo();
-//	int mauso = nhapMauSo();
-//	toiGianPhanSo(&tuso, &mauso);
-//	xuatSoThapPhan(tuso,mauso);
-	
-	
-	int tuSo1, mauSo1, tuSo2, mauSo2;
-	printf("Nhap phan so thu nhat:\n");
-	nhapPhanSo(&tuSo1, &mauSo1);
-	printf("Nhap phan so thu hai:\n");
-	nhapPhanSo(&tuSo2, &mauSo2);
-	
-	int tuSoTong, mauSoTong;
-	int tuSoHieu, mauSoHieu;
-	int tuSoTich, mauSoTich;
-	int tuSoThuong, mauSoThuong;
-	
-	tongPhanSo(tuSo1, mauSo1, tuSo2, mauSo2, &tuSoTong, &mauSoTong);
-	hieuPhanSo(tuSo1, mauSo1, tuSo2, mauSo2, &tuSoHieu, &mauSoHieu);
-	tichPhanSo(tuSo1, mauSo1, tuSo2, mauSo2, &tuSoTich, &mauSoTich);
-	thuongPhanSo(tuSo1, mauSo1, tuSo2, mauSo2, &tuSoThuong, &mauSoThuong);
-	
-	printf("Tong cua hai so thap phan la	: ");
-    xuatPhanSo(tuSoTong, mauSoTong);
-    
-    printf("Hieu cua hai phan so la: ");
-    xuatPhanSo(tuSoHieu, mauSoHieu);
-    
-    printf("Tich cua hai phan so la: ");
-    xuatPhanSo(tuSoTich, mauSoTich);
-    
-    printf("Thuong cua hai phan so la: ");
-    xuatPhanSo(tuSoThuong, mauSoThuong);
-	return 0;
+    printf("Nhap phan so thu nhat:\n");
+    nhapPhanSo(&tuSo1, &mauSo1);
+    printf("Nhap phan so thu hai:\n");
+    nhapPhanSo(&tuSo2, &mauSo2);
 
+    do {
+        printf("\nChon phep toan ban muon thuc hien:\n");
+        printf("1. Tinh tong hai phan so\n");
+        printf("2. Tinh hieu hai phan so\n");
+        printf("3. Tinh tich hai phan so\n");
+        printf("4. Tinh thuong hai phan so\n");
+        printf("5. Thoat\n");
+        printf("Lua chon cua ban: ");
+        scanf("%d", &choice);
+
+        switch(choice) {
+            case 1:
+                tongPhanSo(tuSo1, mauSo1, tuSo2, mauSo2, &tuSoTong, &mauSoTong);
+                printf("Tong cua hai phan so la: ");
+                xuatPhanSo(tuSoTong, mauSoTong);
+                break;
+            case 2:
+                hieuPhanSo(tuSo1, mauSo1, tuSo2, mauSo2, &tuSoHieu, &mauSoHieu);
+                printf("Hieu cua hai phan so la: ");
+                xuatPhanSo(tuSoHieu, mauSoHieu);
+                break;
+            case 3:
+                tichPhanSo(tuSo1, mauSo1, tuSo2, mauSo2, &tuSoTich, &mauSoTich);
+                printf("Tich cua hai phan so la: ");
+                xuatPhanSo(tuSoTich, mauSoTich);
+                break;
+            case 4:
+                thuongPhanSo(tuSo1, mauSo1, tuSo2, mauSo2, &tuSoThuong, &mauSoThuong);
+                printf("Thuong cua hai phan so la: ");
+                xuatPhanSo(tuSoThuong, mauSoThuong);
+                break;
+            case 5:
+                printf("Thoat chuong trinh.\n");
+                break;
+            default:
+                printf("Lua chon khong hop le, vui long chon lai.\n");
+        }
+    } while(choice != 5);
+
+    return 0;
 }
 
