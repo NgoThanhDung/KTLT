@@ -1,4 +1,8 @@
 # C Programming Exercises
+## Cảm ơn thầy
+Chúng em xin gửi lời cảm ơn chân thành đến thầy vì những kiến thức quý báu và sự tận tâm trong quá trình giảng dạy môn Kỹ thuật lập trình. Những bài học của thầy không chỉ giúp chúng em hiểu rõ hơn về lập trình mà còn khơi dậy niềm đam mê trong chúng em. 
+Chúng em rất biết ơn vì những gì thầy đã chia sẻ và mong rằng sẽ tiếp tục học hỏi được nhiều từ thầy trong tương lai. 
+Chúc thầy sức khỏe dồi dào và luôn thành công trong sự nghiệp giảng dạy!
 ## Nhóm: DP
 ## Thành viên: 
    - Ngô Thanh Dũng, MSSV: 2001160202.
