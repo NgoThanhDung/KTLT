@@ -2,7 +2,7 @@
 ## Nhóm: DP
 ## Thành viên: 
    - Ngô Thanh Dũng, MSSV: 2001160202.
-   - Phong, MSSV:
+   - Tống Văn Hoài Phong, MSSV:2001207319.
 ## Giới thiệu
 Đây là dự án chứa các bài tập kỹ thuật lập trình C được phát triển bằng Dev C++. Dự án này nhằm giúp người học rèn luyện kỹ năng lập trình C thông qua các bài tập từ cơ bản đến nâng cao.
 
