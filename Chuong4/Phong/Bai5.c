@@ -2,7 +2,7 @@
 
 // Hàm đệ quy tính phần tử thứ n của cấp số nhân
 int capSoNhan(int a, int q, int n) {
-    if (n == 1)
+1    if (n == 1)
         return a; // Phần tử đầu tiên là a
     return q * capSoNhan(a, q, n - 1); // Gọi đệ quy cho n-1 và nhân với q
 }

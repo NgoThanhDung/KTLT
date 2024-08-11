@@ -156,21 +156,22 @@ double sum11_iterative(int n) {
 
 int main() {
     int n;
-    printf("Nhập giá trị của n: ");
+    printf("Nhap gia tri cua n: ");
     scanf("%d", &n);
 
-    printf("Kết quả cho từng công thức:\n");
-    printf("1. S(%d) = %d (Đệ quy), %d (Khử đệ quy)\n", n, sum1(n), sum1_iterative(n));
-    printf("2. S(%d) = %f (Đệ quy), %f (Khử đệ quy)\n", n, sum2(n), sum2_iterative(n));
-    printf("3. S(%d) = %f (Đệ quy), %f (Khử đệ quy)\n", n, sum3(n), sum3_iterative(n));
-    printf("4. S(%d) = %f (Đệ quy), %f (Khử đệ quy)\n", n, sum4(n), sum4_iterative(n));
-    printf("5. S(%d) = %d (Đệ quy), %d (Khử đệ quy)\n", n, sum5(n), sum5_iterative(n));
-    printf("6. S(%d) = %f (Đệ quy), %f (Khử đệ quy)\n", n, sum6(n), sum6_iterative(n));
-    printf("7. S(%d) = %d (Đệ quy), %d (Khử đệ quy)\n", n, sum7(n), sum7_iterative(n));
-    printf("8. S(%d) = %d (Đệ quy), %d (Khử đệ quy)\n", n, sum8(n), sum8_iterative(n));
-    printf("9. S(%d) = %f (Đệ quy), %f (Khử đệ quy)\n", n, sum9(n), sum9_iterative(n));
-    printf("10. S(%d) = %f (Đệ quy), %f (Khử đệ quy)\n", n, sum10(n), sum10_iterative(n));
-    printf("11. S(%d) = %f (Đệ quy), %f (Khử đệ quy)\n", n, sum11(n), sum11_iterative(n));
+    printf("Ket qua cho tung cong thuc:\n");
+    printf("1. S(%d) = %d (De quy), %d (Khu de quy)\n", n, sum1(n), sum1_iterative(n));
+    printf("2. S(%d) = %f (De quy), %f (Khu de quy)\n", n, sum2(n), sum2_iterative(n));
+    printf("3. S(%d) = %f (De quy), %f (Khu de quy)\n", n, sum3(n), sum3_iterative(n));
+    printf("4. S(%d) = %f (De quy), %f (Khu de quy)\n", n, sum4(n), sum4_iterative(n));
+    printf("5. S(%d) = %d (De quy), %d (Khu de quy)\n", n, sum5(n), sum5_iterative(n));
+    printf("6. S(%d) = %f (De quy), %f (Khu de quy)\n", n, sum6(n), sum6_iterative(n));
+    printf("7. S(%d) = %d (De quy), %d (Khu de quy)\n", n, sum7(n), sum7_iterative(n));
+    printf("8. S(%d) = %d (De quy), %d (Khu de quy)\n", n, sum8(n), sum8_iterative(n));
+    printf("9. S(%d) = %f (De quy), %f (Khu de quy)\n", n, sum9(n), sum9_iterative(n));
+    printf("10. S(%d) = %f (De quy), %f (Khu de quy)\n", n, sum10(n), sum10_iterative(n));
+    printf("11. S(%d) = %f (De quy), %f (Khu de quy)\n", n, sum11(n), sum11_iterative(n));
 
     return 0;
 }
+
