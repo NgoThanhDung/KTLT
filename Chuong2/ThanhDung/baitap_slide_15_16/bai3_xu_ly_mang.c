@@ -194,7 +194,7 @@ bool ktraSHT(int n){
 
 void xuatSoHoanThien(int arr[], int size){
 	int i;
-	for(i = 1; i < size; i++){
+	for(i = 0; i < size; i++){
 		if(ktraSHT(arr[i])){
 			printf("%d ",arr[i]);
 		}
@@ -425,12 +425,13 @@ int main() {
         case 13:
         	nhapMang(arr,size);
 			xuatMang(arr,size);
-        	printf("Cac phan tu chan trong mang a la: \n");
+        	printf("Cac phan tu o vi tri chan trong mang a la: \n");
         	xuatViTriChan(arr,size);
             break;
         case 14:
         	nhapMang(arr,size);
 			xuatMang(arr,size);
+				printf("Cac phan tu o vi tri le trong mang a la: \n");
         	xuatViTriLe(arr,size);
             break;
         case 15:
